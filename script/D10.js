@@ -577,16 +577,20 @@ halfTree(5);
   *****
 
 */
-let str1 = "*";
+let str1 = "         *";
 
 const Tree = (n1) => {
   for (i = 0; i < n1 + 1; i++) {
+    for (j = 0; j < 2; j++) {
+      str1 += ` `.repeat(n1 - i);
+    }
     for (j = 0; j < i; j++) {
       str1 += `**`;
     }
     for (j = 0; j < i; j++) {
-      str1 += `*`;
+      str1 += `**`;
     }
+
     str1 += "\n";
   }
   console.log(str1);
